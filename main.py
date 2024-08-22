@@ -78,14 +78,14 @@ def get_random_film():
     genre = input("Enter a genre: ")
     if validation(genre):
         filtered_movies = data[data["genre"].str.contains(genre, case=False, na=False)]
-    random_movie = filtered_movies.sample(n=1)
-    print(
-        f"""
-          
-          Filme sugerido: {random_movie['title'].values[0]}
-          
-          """
-    )
+        random_movie = filtered_movies.sample(n=1)
+        print(
+            f"""
+            
+            Filme sugerido: {random_movie['title'].values[0]}
+            
+            """
+        )
 
 
 def clear_console():
